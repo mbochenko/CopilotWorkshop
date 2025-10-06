@@ -4,15 +4,17 @@ Welcome to the **GitHub Copilot Self-Paced Learning Workshop**! This comprehensi
 
 ## 🎯 Workshop Overview
 
-This workshop is designed as a **2-3 hour self-paced learning experience** where you'll build a complete application using GitHub Copilot's advanced features including:
+This workshop is designed as a **2-3+ hour self-paced learning experience** where you'll build a complete application using GitHub Copilot's advanced features including:
 
 - ✅ Custom Copilot Instructions
 - ✅ Custom Chat Modes (TDD Mode)
 - ✅ MCP (Model Context Protocol) Server Integration
 - ✅ Test-Driven Development with Copilot
-- ✅ Documentation Automation
+- ✅ Automated E2E Testing with Playwright
+- ✅ Documentation Automation with Mermaid Diagrams
+- ✅ Advanced AI-Assisted Development Techniques
 
-**Time Required:** 2-3 hours  
+**Time Required:** 2-3+ hours  
 **Format:** Self-paced, hands-on labs  
 **Prerequisites:** Basic programming knowledge (JavaScript, Python, or .NET)
 
@@ -35,22 +37,17 @@ Complete the labs in order for the best learning experience:
 | Lab | Title | Duration | Description |
 |-----|-------|----------|-------------|
 | **[Lab 00](./docs/00-setup.md)** | Setup & Configuration | 15 min | Install Copilot, configure MCP servers, choose your scenario |
-| **[Lab 01](./docs/01-copilot-instructions.md)** | Copilot Instructions | 20 min | Create custom `.github/copilot-instructions.md` for your project |
+| **[Lab 01](./docs/01-copilot-instructions-file.md)** | Copilot Instructions | 20 min | Create custom `.github/copilot-instructions.md` for your project |
 | **[Lab 02](./docs/02-custom-chat-modes.md)** | Custom Chat Modes | 25 min | Build a TDD chat mode for enforcing test-first development |
-| **[Lab 03](./docs/03-playwright-mcp.md)** | Playwright MCP Server | 25 min | Integrate Playwright MCP for automated E2E test generation |
-| **[Lab 05](./docs/05-tdd-with-copilot.md)** | Test-Driven Development | 30 min | Apply TDD workflow using your custom chat mode |
-| **[Lab 06](./docs/06-documentation.md)** | Documentation Automation | 25 min | Auto-generate README, CHANGELOG, and API docs |
-
-### Bonus Lab (Optional)
-
-| Lab | Title | Duration | Description |
-|-----|-------|----------|-------------|
-| **[Lab 04](./docs/04-dotnet.md)** | .NET Migration Example | 30 min | Migrate a .NET Framework app to .NET 8 (advanced) |
+| **[Lab 03](./docs/03-tdd-with-copilot.md)** | Test-Driven Development | 30 min | Apply TDD workflow using your custom chat mode |
+| **[Lab 04](./docs/04-playwright-mcp.md)** | Playwright MCP Server | 25 min | Integrate Playwright MCP for automated E2E test generation |
+| **[Lab 05](./docs/05-documentation.md)** | Documentation Automation | 30 min | Auto-generate README, CHANGELOG, API docs, and Mermaid diagrams |
+| **[Lab 06](./docs/06-advanced-techniques.md)** | Advanced Techniques | 25 min | Advanced Copilot features and best practices |
 
 **Total Time:**
-- **Express (2 hours):** Labs 00, 01, 02, 05, 06
-- **Comprehensive (3 hours):** Labs 00, 01, 02, 03, 05, 06
-- **Advanced (3 hours):** All labs including Lab 04
+- **Express (2 hours):** Labs 00, 01, 02, 03, 05
+- **Comprehensive (3 hours):** Labs 00, 01, 02, 03, 04, 05, 06
+- **Advanced (3+ hours):** All labs with extended practice
 
 ---
 
@@ -60,16 +57,16 @@ Choose ONE scenario to implement throughout the workshop. Each has different com
 
 | Scenario | Complexity | Time | Focus Area |
 |----------|------------|------|------------|
-| **[Expense Tracker](./challenges/expensetracker/README.md)** | ⭐⭐ | 45-60 min | CRUD operations, basic validation |
-| **[Weather App](./challenges/weatherapp/README.md)** | ⭐⭐ | 45-60 min | API integration, caching, error handling |
-| **[KYC Portal](./challenges/kycportal/README.md)** | ⭐⭐⭐⭐ | 90-120 min | File uploads, security, multi-step workflows |
-| **[360° Customer View](./challenges/360customer/README.md)** | ⭐⭐⭐⭐⭐ | 90-120 min | Data aggregation, real-time updates, compliance |
+| **[Expense Tracker](./challenges/expensetracker/README.md)** | ⭐⭐ | 2-3 hours | CRUD operations, basic validation |
+| **[Weather App](./challenges/weatherapp/README.md)** | ⭐⭐ | 2-3 hours | API integration, caching, error handling |
+| **[KYC Portal](./challenges/kycportal/README.md)** | ⭐⭐⭐⭐ | 3+ hours | File uploads, security, multi-step workflows |
+| **[360° Customer View](./challenges/360customer/README.md)** | ⭐⭐⭐⭐⭐ | 3+ hours | Data aggregation, real-time updates, compliance |
 
 ### Scenario Selection Guide
 
-**Beginners (2-hour workshop):** Choose **Expense Tracker** or **Weather App**  
-**Intermediate (3-hour workshop):** Choose **KYC Portal**  
-**Advanced (3-hour workshop):** Choose **360° Customer View**
+**Beginners (2-hour workshop):** Choose **Expense Tracker** or **Weather App** (focus on basic features)  
+**Intermediate (3-hour workshop):** Choose **Expense Tracker**, **Weather App**, or **KYC Portal**  
+**Advanced (3+ hour workshop):** Choose **KYC Portal** or **360° Customer View**
 
 ---
 
@@ -77,17 +74,9 @@ Choose ONE scenario to implement throughout the workshop. Each has different com
 
 ### Step 1: Environment Setup
 
-**Option A: GitHub Codespaces (Recommended)**
-
-1. Click **Code** → **Create codespace on main**
-2. Wait for environment to load (~2-3 minutes)
-3. Extensions will install automatically
-
-**Option B: Local Development**
-
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/CopilotWorkshop.git
+   git clone https://github.com/mbochenko/CopilotWorkshop.git
    cd CopilotWorkshop
    ```
 
@@ -97,10 +86,15 @@ Choose ONE scenario to implement throughout the workshop. Each has different com
    - [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) extension
    - [GitHub Copilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat) extension
 
+3. Open the project in Visual Studio Code:
+   ```bash
+   code .
+   ```
+
 ### Step 2: Choose Your Scenario
 
 Browse the [Project Scenarios](#-project-scenarios) and select one that matches your:
-- Available time (2-3 hours)
+- Available time (2-3+ hours)
 - Skill level (beginner to advanced)
 - Technology preference (JavaScript, Python, or .NET)
 
@@ -116,17 +110,15 @@ Begin with **[Lab 00: Setup & Configuration](./docs/00-setup.md)** to:
 
 Complete labs 01-06 in order, applying the techniques to your chosen scenario.
 
+**Note:** All lab instructions are in the `docs/` folder, and project scenarios are in the `challenges/` folder.
+
 ---
 
 ## 📚 Additional Resources
 
 ### Reference Guides
 
-- **[Copilot Best Practices](./COPILOT_BEST_PRACTICES.md)** - Tips and best practices
-- **[Demo Plan](./COPILOT_DEMO_PLAN.md)** - Instructor demonstration guide
-- **[Training Exercises](./COPILOT_TRAINING_EXERCISES.md)** - Additional practice exercises
-- **[GitHub Issues Demo](./DEMO_GITHUB_ISSUES.md)** - GitHub Issues integration examples
-- **[Quick Reference](./DEMO_QUICK_REFERENCE.md)** - Keyboard shortcuts and commands
+- **[Workshop Agenda](./WORKSHOP_AGENDA.md)** - Detailed schedules and learning objectives
 
 ### Custom Instructions Examples
 
@@ -161,6 +153,7 @@ By completing this workshop, you will:
 4. **Streamline Documentation**
    - Auto-generate comprehensive README files
    - Create and maintain CHANGELOG files
+   - Create visual architecture diagrams with Mermaid
    - Document APIs and add inline comments
 
 5. **Apply Best Practices**
@@ -205,11 +198,11 @@ Choose the stack you're most comfortable with:
 00:00-00:15  Lab 00: Setup & Configuration
 00:15-00:35  Lab 01: Copilot Instructions
 00:35-01:00  Lab 02: Custom Chat Modes
-01:00-01:30  Lab 05: Test-Driven Development
-01:30-02:00  Lab 06: Documentation Automation
+01:00-01:30  Lab 03: Test-Driven Development
+01:30-02:00  Lab 05: Documentation Automation
 ```
 
-**Skip:** Lab 03 (Playwright MCP), Lab 04 (.NET Migration)
+**Skip:** Lab 04 (Playwright MCP), Lab 06 (Advanced Techniques)
 
 ### 3-Hour Comprehensive Workshop
 
@@ -219,26 +212,25 @@ Choose the stack you're most comfortable with:
 00:00-00:15  Lab 00: Setup & Configuration
 00:15-00:35  Lab 01: Copilot Instructions
 00:35-01:00  Lab 02: Custom Chat Modes
-01:00-01:25  Lab 03: Playwright MCP Server
-01:25-01:55  Lab 05: Test-Driven Development
-01:55-02:20  Lab 06: Documentation Automation
-02:20-03:00  Project completion and polish
+01:00-01:30  Lab 03: Test-Driven Development
+01:30-01:55  Lab 04: Playwright MCP Server
+01:55-02:25  Lab 05: Documentation Automation
+02:25-03:00  Lab 06: Advanced Techniques
 ```
 
-**Skip:** Lab 04 (.NET Migration)
+### 3+ Hour Advanced Workshop
 
-### 3-Hour Advanced Workshop
-
-**Focus:** Complex scenarios and advanced techniques
+**Focus:** Complete mastery with extended practice
 
 ```
 00:00-00:15  Lab 00: Setup & Configuration
 00:15-00:35  Lab 01: Copilot Instructions
 00:35-01:00  Lab 02: Custom Chat Modes
-01:00-01:30  Lab 04: .NET Migration (or other advanced topic)
-01:30-02:00  Lab 05: Test-Driven Development
-02:00-02:25  Lab 06: Documentation Automation
-02:25-03:00  Project completion and polish
+01:00-01:30  Lab 03: Test-Driven Development
+01:30-01:55  Lab 04: Playwright MCP Server
+01:55-02:25  Lab 05: Documentation Automation
+02:25-02:50  Lab 06: Advanced Techniques
+02:50-03:30  Extended practice and project completion
 ```
 
 ---
