@@ -499,7 +499,7 @@ Exit [Mode Name] and return to normal Copilot chat mode.
 
 **What's Next:**
 
-Proceed to [Lab 03: Playwright MCP Server](./03-playwright-mcp.md) to integrate Playwright for automated E2E test generation.
+Proceed to [Lab 03: Test-Driven Development](./05-tdd-with-copilot.md) to practice TDD workflow with your custom TDD mode.
 
 **Optional Enhancements:**
 
@@ -518,4 +518,4 @@ Proceed to [Lab 03: Playwright MCP Server](./03-playwright-mcp.md) to integrate 
 
 ---
 
-OK. You've completed Lab 02. Let's move onto [Lab 03: Playwright MCP Server](./03-playwright-mcp.md).
+OK. You've completed Lab 02. Let's move onto [Lab 03: Test-Driven Development](./05-tdd-with-copilot.md).

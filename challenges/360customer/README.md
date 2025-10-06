@@ -280,7 +280,6 @@ This challenge combines data aggregation, real-time features, complex business l
 ### Gambling Industry Compliance:
 - [UK Gambling Commission Guidelines](https://www.gamblingcommission.gov.uk/)
 - [Responsible Gambling Best Practices](https://www.begambleaware.org/)
-- [AML for Gaming Industry](https://www.fatf-gafi.org/)
 
 ### Real-Time Technologies:
 - [WebSocket API](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket)

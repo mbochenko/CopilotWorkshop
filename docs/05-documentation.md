@@ -1,4 +1,4 @@
-# 06: Documentation Automation with GitHub Copilot
+# 05: Documentation Automation with GitHub Copilot
 
 ## Scenario
 
@@ -26,6 +26,7 @@ Good documentation is crucial for maintainability, onboarding, and user adoption
 - [Generate Project README.md](#generate-project-readmemd)
 - [Create CHANGELOG.md](#create-changelogmd)
 - [Generate API Documentation](#generate-api-documentation)
+- [Create Mermaid Diagrams](#create-mermaid-diagrams)
 - [Add Code Comments and Docstrings](#add-code-comments-and-docstrings)
 - [Create User Guide](#create-user-guide)
 - [Keep Documentation Updated](#keep-documentation-updated)
@@ -298,6 +299,183 @@ Good documentation is crucial for maintainability, onboarding, and user adoption
 
 ---
 
+## Create Mermaid Diagrams
+
+### Step 7A: Set Up Mermaid MCP Server
+
+1. First, activate the Mermaid diagram tools:
+
+   ```text
+   I need to create technical diagrams for my documentation. Help me activate the Mermaid diagram tools to create flowcharts, sequence diagrams, and architecture diagrams.
+   ```
+
+### Step 7B: Create Architecture Diagram
+
+1. Use this prompt to create a system architecture diagram:
+
+   ```text
+   Create a Mermaid architecture diagram for my project. Follow the instructions below.
+   
+   [Choose based on your scenario:]
+   
+   **For Expense Tracker:**
+   ```
+   Create a Mermaid diagram showing the architecture of my Expense Tracker application.
+   
+   Include:
+   - Frontend (React/Vue/Blazor)
+   - Backend API (Node.js/Python/ASP.NET)
+   - Database (if used)
+   - External services (if any)
+   - User interactions and data flow
+   
+   Use either a flowchart or C4 architecture diagram format.
+   Show the main components and how they interact.
+   ```
+   
+   **For Weather App:**
+   ```
+   Create a Mermaid diagram showing the architecture of my Weather App.
+   
+   Include:
+   - Frontend application
+   - Backend API
+   - Weather API integration (OpenWeatherMap/WeatherAPI)
+   - Caching layer
+   - User location services
+   - Data flow from API to user
+   
+   Use a flowchart format showing the complete data flow.
+   Include caching and error handling paths.
+   ```
+   
+   **For KYC Portal:**
+   ```
+   Create a Mermaid diagram showing the KYC verification workflow.
+   
+   Include:
+   - User document upload
+   - Document validation steps
+   - Manual review process
+   - Approval/rejection flow
+   - Audit trail creation
+   - Different user roles (User, Reviewer, Admin)
+   
+   Use a flowchart showing the complete verification process.
+   Include decision points and different paths.
+   ```
+   
+   **For 360° Customer View:**
+   ```
+   Create a Mermaid diagram showing the customer data aggregation system.
+   
+   Include:
+   - Multiple data sources (Profile, Transactions, Support, Compliance)
+   - Data aggregation service
+   - Real-time update mechanisms (WebSocket/SSE)
+   - Frontend dashboard
+   - RG (Responsible Gaming) monitoring
+   
+   Use a system architecture diagram format.
+   Show data sources, processing, and presentation layers.
+   ```
+   
+   Save the diagram as ARCHITECTURE.md and validate it's proper Mermaid syntax.
+   ```
+
+1. Review the generated architecture diagram.
+
+1. Click the ![keep button](https://img.shields.io/badge/keep-blue) button.
+
+### Step 7C: Create API Flow Diagram
+
+1. Create a sequence diagram for API interactions:
+
+   ```text
+   Create a Mermaid sequence diagram showing a typical API interaction flow in my application.
+   
+   [Choose a key user flow based on your scenario:]
+   
+   **For Expense Tracker:** "Add New Expense" flow
+   **For Weather App:** "Search Weather for City" flow  
+   **For KYC Portal:** "Document Upload and Verification" flow
+   **For 360° Customer:** "Load Customer Profile" flow
+   
+   Include:
+   - User actions
+   - Frontend requests
+   - Backend processing
+   - Database operations
+   - External API calls (if any)
+   - Response flow back to user
+   - Error handling scenarios
+   
+   Use Mermaid sequence diagram format.
+   Show the complete interaction from user action to response.
+   Include timing and async operations.
+   
+   Save as API_FLOW.md
+   ```
+
+1. Review the sequence diagram.
+
+1. Click the ![keep button](https://img.shields.io/badge/keep-blue) button.
+
+### Step 7D: Create Database Schema Diagram
+
+1. If your project uses a database, create a schema diagram:
+
+   ```text
+   Create a Mermaid entity relationship diagram (ERD) for my database schema.
+   
+   Include:
+   - All database tables/collections
+   - Primary keys
+   - Foreign key relationships
+   - Important fields for each table
+   - Relationships between entities (one-to-one, one-to-many, many-to-many)
+   
+   Use Mermaid ERD format.
+   Make it clear and easy to understand.
+   
+   If I don't use a database, create a data flow diagram instead showing how data moves through my application.
+   
+   Save as DATABASE_SCHEMA.md
+   ```
+
+1. Review the database schema diagram.
+
+1. Click the ![keep button](https://img.shields.io/badge/keep-blue) button.
+
+### Step 7E: Add Diagrams to README
+
+1. Integrate the diagrams into your main documentation:
+
+   ```text
+   Update README.md to include the Mermaid diagrams I just created.
+   
+   Add a new "Architecture" section after the "Features" section with:
+   
+   1. System Architecture diagram (from ARCHITECTURE.md)
+   2. Brief explanation of the architecture
+   3. Link to detailed architecture documentation
+   
+   Add a new "API Flow" section in the API documentation with:
+   1. Key API interaction sequence diagram (from API_FLOW.md)
+   2. Brief explanation of the flow
+   
+   If database schema exists, add to "Database" section:
+   1. Database schema diagram (from DATABASE_SCHEMA.md)
+   2. Brief explanation of the data model
+   
+   Make sure the Mermaid diagrams render properly in GitHub.
+   Use proper Mermaid code blocks with ```mermaid syntax.
+   ```
+
+1. Click the ![keep button](https://img.shields.io/badge/keep-blue) button.
+
+---
+
 ## Add Code Comments and Docstrings
 
 ### Step 8: Add Function Documentation
@@ -529,6 +707,7 @@ Include compliance reminders.
       - [ ] Update README Features section
       - [ ] Add to CHANGELOG (Unreleased > Added)
       - [ ] Update API.md if API changed
+      - [ ] Update architecture diagrams if structure changed
       - [ ] Add code comments/docstrings
       - [ ] Update User Guide
       - [ ] Add examples if complex
@@ -541,6 +720,7 @@ Include compliance reminders.
    3. **When Changing API**
       - [ ] Update API.md
       - [ ] Update swagger.yaml
+      - [ ] Update API flow diagrams if needed
       - [ ] Add to CHANGELOG (Changed or Removed)
       - [ ] Update code examples
       - [ ] Update README if breaking change
@@ -557,6 +737,7 @@ Include compliance reminders.
       - [ ] Check for outdated screenshots
       - [ ] Verify all links work
       - [ ] Update dependency versions
+      - [ ] Review and update diagrams for accuracy
       - [ ] Review and update examples
    
    Make it a practical checklist teams can use.
@@ -626,6 +807,21 @@ Include compliance reminders.
    - Note breaking changes
    - Thank contributors
    - Provide upgrade instructions if needed
+   ```
+   
+   **Update Architecture Diagram:**
+   ```
+   I made changes to the system architecture:
+   
+   Changes: [Describe what changed]
+   New components: [List any new services/modules]
+   Removed components: [List any removed parts]
+   
+   Update the Mermaid architecture diagram in README.md to reflect these changes.
+   Ensure the diagram accurately shows:
+   - Component relationships
+   - Data flow
+   - External dependencies
    ```
    
    Make prompts copy-paste ready.
@@ -776,9 +972,11 @@ Provide a prioritized list of documentation tasks.
 
 ## Next Steps
 
-✅ **Lab 06 Complete!** You've automated documentation for your entire project.
+✅ **Lab 05 Complete!** You've automated documentation for your entire project.
 
-**Congratulations! You've completed the entire GitHub Copilot Workshop! 🎉**
+**What's Next:**
+
+Proceed to [Lab 06: Advanced Techniques](./07-advanced-techniques.md) to master advanced GitHub Copilot techniques for expert developers.
 
 **What You've Accomplished:**
 
@@ -826,19 +1024,4 @@ Provide a prioritized list of documentation tasks.
 
 ---
 
-**Thank you for completing the GitHub Copilot Workshop!**
-
-We hope you've learned valuable skills for using GitHub Copilot to accelerate your development workflow while maintaining high code quality and comprehensive documentation.
-
-**Keep coding with Copilot! 🚀**
-
----
-
-**Workshop Feedback:**
-
-Please share your feedback:
-- What was most valuable?
-- What could be improved?
-- What would you like to learn next?
-
-[Create a GitHub Issue](https://github.com/yourusername/CopilotWorkshop/issues) with your feedback!
+OK. You've completed Lab 05. Let's move onto [Lab 06: Advanced Techniques](./06-advanced-techniques.md).
