@@ -36,7 +36,7 @@ By creating a custom `.github/copilot-instructions.md` file, you'll guide Copilo
 
    ![GitHub Copilot Agent Mode](./images/setup-03.png)
 
-1. Select model to either `GPT-4.1` or `Claude Sonnet 4`.
+1. Select model to either `GPT-4.1` or `Claude Sonnet 4.5 / GPT-5-Codex` (Premium models).
 
 1. Make sure that you've configured [MCP Servers](./00-setup.md#set-up-mcp-servers).
 
@@ -71,8 +71,7 @@ REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
    - My tech stack is: [Choose: JavaScript/Node.js + React | Python + Flask | .NET + Blazor]
    - Create the following directory structure:
      - .github/ (for Copilot instructions)
-     - src/ or backend/ (for backend code)
-     - frontend/ (for frontend code if full-stack)
+     - src/
      - tests/ (for test files)
    - Create a README.md with project title and brief description
    - Initialize package.json (Node.js) OR requirements.txt (Python) OR .csproj (.NET)

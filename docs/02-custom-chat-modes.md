@@ -73,9 +73,9 @@ Custom modes are defined in `.github/copilot-instructions.md` using special mark
 1. Use the prompt below to add a TDD mode to your Copilot instructions:
 
    ```text
-   Update .github/copilot-instructions.md to add a custom TDD (Test-Driven Development) chat mode. Follow the instructions below.
+   Update .github/chatmodes/TDD.md to add a custom TDD (Test-Driven Development) chat mode. Follow the instructions below.
    
-   Add a new section called "## Custom Chat Modes" with the following TDD mode:
+   You are an expert AI pair programmer following strict Test-Driven Development (TDD) principles.
    
    **TDD Mode Requirements:**
    1. Mode name: "TDD Mode" or activated with "I want to use TDD"
@@ -111,7 +111,7 @@ Custom modes are defined in `.github/copilot-instructions.md` using special mark
 1. Use this prompt to make the TDD mode more strict and detailed:
 
    ```text
-   Enhance the TDD Mode in .github/copilot-instructions.md with stricter rules:
+   Enhance the TDD Mode in .github/chatmodes/TDD.md with stricter rules:
    
    Add the following enforcement rules:
    
@@ -366,7 +366,7 @@ Custom modes are defined in `.github/copilot-instructions.md` using special mark
 1. Use this prompt to add a Security Auditor mode:
 
    ```text
-   Add a new custom chat mode to .github/copilot-instructions.md called "Security Auditor Mode".
+   Add a new custom chat mode to .github/chatmodes/ called "Security Auditor Mode".
    
    Mode requirements:
    - Activated with "Security Auditor Mode" or "Review security"
@@ -468,10 +468,8 @@ Custom modes are defined in `.github/copilot-instructions.md` using special mark
 
 **Solution:**
 
-1. Verify mode is defined in `.github/copilot-instructions.md`
-2. Use exact activation phrase
-3. Reload VS Code window
-4. Try: "Activate [Mode Name] as defined in copilot-instructions.md"
+1. Verify mode is defined in `.github/chatmodes/`
+2. Choose the right mode in chat window
 
 ### Issue: Mode Doesn't Follow Rules
 
@@ -480,7 +478,7 @@ Custom modes are defined in `.github/copilot-instructions.md` using special mark
 ```text
 You're in [Mode Name] but not following the rules. Please:
 
-- Review the [Mode Name] definition in .github/copilot-instructions.md
+- Review the [Mode Name] definition in .github/chatmodes/[Mode Name].md
 - Follow ALL rules specified for this mode
 - If I'm requesting something forbidden in this mode, tell me and enforce the rule
 ```
