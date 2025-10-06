@@ -182,7 +182,6 @@ Let's make sure MCP servers are working before proceeding to the labs.
 
 - [GitHub Copilot Documentation](https://docs.github.com/en/copilot)
 - [MCP Servers List](https://github.com/mcp)
-- [Copilot Best Practices](../COPILOT_BEST_PRACTICES.md)
 
 ---
 
