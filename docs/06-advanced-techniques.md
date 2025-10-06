@@ -18,7 +18,7 @@ This lab focuses on advanced, production-ready scenarios that experienced develo
 
 - Completed [Lab 00: Setup & Configuration](./00-setup.md)
 - Completed [Lab 01: Copilot Instructions](./01-copilot-instructions.md)
-- Completed [Lab 04: TDD with Copilot](./05-tdd-with-copilot.md)
+- Completed [Lab 03: TDD with Copilot](./05-tdd-with-copilot.md)
 - Have a working project with implemented features
 - GitHub Copilot is active in Agent Mode
 - Comfortable with advanced programming concepts

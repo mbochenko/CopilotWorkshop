@@ -1,4 +1,4 @@
-# 03: Playwright MCP Server for E2E Testing
+# 04: Playwright MCP Server for E2E Testing
 
 ## Scenario
 
@@ -15,11 +15,11 @@ In this lab, you'll set up the Playwright MCP server and use it to generate E2E 
 
 ## Prerequisites
 
-- Completed [Lab 00: Setup & Configuration](./00-setup.md)
-- Completed [Lab 01: Copilot Instructions](./01-copilot-instructions.md)
+- Completed [Lab 02: Custom Chat Modes](./02-custom-chat-modes.md)
+- Completed [Lab 03: TDD with Copilot](./05-tdd-with-copilot.md)
 - GitHub Copilot is active in Agent Mode
 - Node.js 18+ installed (for Playwright MCP server)
-- Your project has a running application (frontend)
+- Your project has implemented features with tests (from Lab 03)
 
 ## Getting Started
 
@@ -575,11 +575,11 @@ My test selectors keep breaking when UI changes. Help me create more stable sele
 
 ## Next Steps
 
-✅ **Lab 03 Complete!** You've integrated Playwright MCP server for E2E testing.
+✅ **Lab 04 Complete!** You've integrated Playwright MCP server for E2E testing.
 
 **What's Next:**
 
-Proceed to [Lab 04: Test-Driven Development](./05-tdd-with-copilot.md) to practice TDD workflow with your custom TDD mode.
+Proceed to [Lab 05: Documentation Automation](./06-documentation.md) to generate comprehensive documentation for your tested features.
 
 **Optional Enhancements:**
 
@@ -602,4 +602,4 @@ Proceed to [Lab 04: Test-Driven Development](./05-tdd-with-copilot.md) to practi
 
 ---
 
-OK. You've completed Lab 03. Let's move onto [Lab 04: Test-Driven Development](./05-tdd-with-copilot.md).
+OK. You've completed Lab 04. Let's move onto [Lab 05: Documentation Automation](./05-documentation.md).

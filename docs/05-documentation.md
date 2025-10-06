@@ -828,4 +828,4 @@ Proceed to [Lab 06: Advanced Techniques](./07-advanced-techniques.md) to master 
 
 ---
 
-OK. You've completed Lab 05. Let's move onto [Lab 06: Advanced Techniques](./07-advanced-techniques.md).
+OK. You've completed Lab 05. Let's move onto [Lab 06: Advanced Techniques](./06-advanced-techniques.md).
