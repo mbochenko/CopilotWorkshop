@@ -44,21 +44,7 @@ By creating a custom `.github/copilot-instructions.md` file, you'll guide Copilo
 
 ## Set Up Project Environment
 
-### Step 1: Set Repository Root Environment Variable
-
-Set the environment variable to easily reference your repository root.
-
-```powershell
-# PowerShell
-$REPOSITORY_ROOT = git rev-parse --show-toplevel
-```
-
-```bash
-# bash/zsh
-REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
-```
-
-### Step 2: Create Project Directory Structure
+### Step 1: Create Project Directory Structure
 
 1. Open GitHub Copilot Chat in Agent Mode.
 
@@ -134,6 +120,9 @@ REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
 1. Review the generated `copilot-instructions.md` file.
 
 1. Click the ![keep button](https://img.shields.io/badge/keep-blue) button to accept the changes.
+
+TIP: You can also create or update instructions file by using option in chat mode (Visual Studio Code has hardcoded prompt that will be pasterd into the chat)
+![instructions](./images/instructions-01.png )
 
 ---
 
