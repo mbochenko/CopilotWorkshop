@@ -121,8 +121,9 @@ By creating a custom `.github/copilot-instructions.md` file, you'll guide Copilo
 
 1. Click the ![keep button](https://img.shields.io/badge/keep-blue) button to accept the changes.
 
-TIP: You can also create or update instructions file by using option in chat mode (Visual Studio Code has hardcoded prompt that will be pasterd into the chat)
-![instructions](./images/instructions-01.png )
+**💡 TIP:** You can also create or update the instructions file using the built-in option in VS Code's Chat Mode. Visual Studio Code has a hardcoded prompt that will be automatically pasted into the chat for you.
+
+![Copilot Instructions Option](./images/instructions-01.png)
 
 ---
 
