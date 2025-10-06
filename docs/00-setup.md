@@ -11,12 +11,12 @@ This setup lab will ensure you have all the necessary tools and configurations i
 Before starting this workshop, ensure you have:
 
 ### Required Software
-- ✅ **Visual Studio Code** (latest version) OR **GitHub Codespaces**
+- ✅ **Visual Studio Code** (latest version)
 - ✅ **Git** (2.30 or later)
-- ✅ **GitHub Account** with Copilot access (or start a free trial)
+- ✅ **GitHub Account** with **GitHub Copilot license** (active subscription)
 - ✅ **Node.js 18+** OR **Python 3.9+** OR **.NET 8+** (depending on your preferred tech stack)
 
-### Recommended VS Code Extensions
+### Required VS Code Extensions
 - ✅ **GitHub Copilot** (`GitHub.copilot`)
 - ✅ **GitHub Copilot Chat** (`GitHub.copilot-chat`)
 - ✅ Language-specific extensions based on your choice:
@@ -24,67 +24,28 @@ Before starting this workshop, ensure you have:
   - Python: Python extension, Pylance
   - .NET: C# Dev Kit, C#
 
-### Hardware Requirements
-- 8GB RAM minimum (16GB recommended)
-- 2GB free disk space
-- Stable internet connection
-
 ## Getting Started
 
-- [Verify GitHub Copilot Access](#verify-github-copilot-access)
 - [Set Up Your Development Environment](#set-up-your-development-environment)
-- [Install Required Extensions](#install-required-extensions)
-- [Configure GitHub Copilot](#configure-github-copilot)
 - [Set Up MCP Servers](#set-up-mcp-servers)
 - [Choose Your Project Scenario](#choose-your-project-scenario)
 - [Verify Your Setup](#verify-your-setup)
 
 ---
 
-## Verify GitHub Copilot Access
-
-### Step 1: Check Copilot Subscription
-
-1. Navigate to [https://github.com/settings/copilot](https://github.com/settings/copilot)
-2. Verify that you have an active Copilot subscription
-3. If not, start a **free 30-day trial** or subscribe
-
-   ![GitHub Copilot Subscription](./images/setup-copilot-subscription.png)
-
-### Step 2: Confirm Copilot Settings
-
-1. In the Copilot settings page, ensure:
-   - ✅ **Public code suggestions**: Allowed (or match your organization's policy)
-   - ✅ **GitHub Copilot in the CLI**: Enabled (optional)
-   - ✅ **GitHub Copilot Chat**: Enabled
-
----
-
 ## Set Up Your Development Environment
-
-### Option 1: Use GitHub Codespaces (Recommended)
-
-GitHub Codespaces provides a cloud-based development environment with everything pre-installed.
-
-1. Fork this repository to your GitHub account
-2. Click the **Code** button and select **Codespaces**
-3. Click **Create codespace on main** (or dev branch)
-4. Wait for the environment to initialize (~2-3 minutes)
-5. Skip to [Install Required Extensions](#install-required-extensions)
-
-### Option 2: Use Local VS Code
 
 1. **Clone the repository:**
 
    ```powershell
    # PowerShell
-   git clone https://github.com/YOUR-USERNAME/CopilotWorkshop.git
+   git clone https://github.com/mbochenko/CopilotWorkshop.git
    cd CopilotWorkshop
    ```
 
    ```bash
    # Bash/Zsh
-   git clone https://github.com/YOUR-USERNAME/CopilotWorkshop.git
+   git clone https://github.com/mbochenko/CopilotWorkshop.git
    cd CopilotWorkshop
    ```
 
@@ -94,131 +55,59 @@ GitHub Codespaces provides a cloud-based development environment with everything
    code .
    ```
 
-3. **Set environment variable for repository root:**
+3. **Verify GitHub Copilot Extensions are installed and active:**
 
-   ```powershell
-   # PowerShell
-   $REPOSITORY_ROOT = git rev-parse --show-toplevel
-   ```
+   - Open VS Code Extensions panel (`Ctrl+Shift+X` / `Cmd+Shift+X`)
+   - Verify **GitHub Copilot** and **GitHub Copilot Chat** are installed and enabled
+   - If not installed, install them now and restart VS Code
 
-   ```bash
-   # Bash/Zsh
-   export REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
-   ```
+4. **Sign in to GitHub:**
 
----
-
-## Install Required Extensions
-
-### Step 1: Install GitHub Copilot Extensions
-
-1. Open VS Code
-2. Click the Extensions icon in the sidebar (or press `Ctrl+Shift+X` / `Cmd+Shift+X`)
-3. Search for and install:
-   - **GitHub Copilot** (`GitHub.copilot`)
-   - **GitHub Copilot Chat** (`GitHub.copilot-chat`)
-
-   ![Install Copilot Extensions](./images/setup-extensions.png)
-
-4. Restart VS Code if prompted
-
-### Step 2: Sign In to GitHub
-
-1. Click the **Accounts** icon in the bottom-left corner of VS Code
-2. Select **Sign in with GitHub**
-3. Authorize VS Code in your browser
-4. Return to VS Code
-
-### Step 3: Verify Copilot is Active
-
-1. Open any code file (create a new `.js`, `.py`, or `.cs` file)
-2. Type a comment like: `// Function to calculate the sum of two numbers`
-3. Press `Enter` and wait for Copilot to suggest code
-4. If you see a suggestion, Copilot is working! ✅
-
-   ![Copilot Suggestion](./images/setup-copilot-working.png)
-
----
-
-## Configure GitHub Copilot
-
-### Step 1: Check Copilot Agent Mode
-
-1. Click the **GitHub Copilot icon** in the Activity Bar (left sidebar)
-2. This opens the Copilot Chat panel
-3. Verify you're using **Agent Mode** (look for agent selector at the top)
-
-   ![GitHub Copilot Agent Mode](./images/setup-agent-mode.png)
-
-4. Select your preferred AI model:
-   - **GPT-4o** (faster, good for most tasks)
-   - **Claude Sonnet 4** (better for complex reasoning)
-
-### Step 2: Configure Copilot Settings
-
-1. Open VS Code Settings (`Ctrl+,` / `Cmd+,`)
-2. Search for "Copilot"
-3. Recommended settings:
-   - ✅ **Enable Auto-Completions**: On
-   - ✅ **Enable Copilot Chat**: On
-   - ✅ **Inline Suggest**: Enabled
-   - ✅ **Trigger Automatically**: On (or set to manual if you prefer)
-
-   ![Copilot Settings](./images/setup-copilot-settings.png)
+   - Click the **Accounts** icon in the bottom-left corner of VS Code
+   - Select **Sign in with GitHub** if not already signed in
+   - Authorize VS Code in your browser
 
 ---
 
 ## Set Up MCP Servers
 
-**MCP (Model Context Protocol)** allows Copilot to interact with external tools and services for enhanced capabilities.
+**MCP (Model Context Protocol)** allows GitHub Copilot to interact with external tools and services for enhanced capabilities.
 
-### Step 1: Install Context7 MCP Server
+### What are MCP Servers?
 
-The Context7 MCP server provides up-to-date documentation for libraries and frameworks.
+MCP servers extend GitHub Copilot's capabilities by providing access to:
+- Up-to-date library documentation (Context7)
+- Browser automation and testing (Playwright)
+- And many other integrations
 
-1. Open the Copilot Chat panel
-2. Type the following command:
+### Installing MCP Servers for VS Code
 
-   ```text
-   @terminal install context7 mcp server
-   ```
+Follow the official MCP installation guide from Anthropic:
 
-3. Alternatively, install manually:
+1. **Visit the MCP GitHub Repository:**
+   - Go to [https://github.com/anthropics/anthropic-quickstarts](https://github.com/anthropics/anthropic-quickstarts)
+   - Navigate to the **MCP Quickstart Guide** section
 
-   **For Node.js projects:**
-   ```powershell
-   npx @context7/mcp-server
-   ```
+2. **Install MCP Servers for VS Code:**
+   - Follow the instructions for installing MCP servers in Visual Studio Code
+   - The guide provides detailed steps for setting up various MCP servers
+   - Common servers include:
+     - **Context7**: For accessing library documentation
+     - **Playwright**: For browser automation (covered in Lab 03)
+     - **GitHub**: For repository interactions
 
-   **For Python projects:**
-   ```powershell
-   pip install context7-mcp
-   ```
+3. **Configure VS Code Settings:**
+   - After installation, MCP servers need to be configured in VS Code settings
+   - The quickstart guide provides the necessary configuration JSON
+   - Restart VS Code after configuration
 
-### Step 2: Install Playwright MCP Server (Optional)
+### Verify MCP Server Installation
 
-This will be covered in detail in [Lab 03](./03-playwright-mcp.md), but you can install it now:
+1. Open GitHub Copilot Chat in VS Code
+2. Look for MCP server indicators in the chat interface
+3. You should see available MCP servers listed when relevant
 
-```powershell
-# PowerShell
-npm install -g @playwright/mcp-server
-```
-
-```bash
-# Bash
-npm install -g @playwright/mcp-server
-```
-
-### Step 3: Verify MCP Servers
-
-1. In Copilot Chat, type:
-
-   ```text
-   List available MCP servers
-   ```
-
-2. You should see `context7` in the list
-3. If not, restart VS Code and check again
+**Note:** Specific MCP servers like Playwright will be configured in detail in subsequent labs (see [Lab 03: Playwright MCP](./03-playwright-mcp.md)).
 
 ---
 
@@ -263,85 +152,19 @@ cd challenges/expensetracker
 
 ## Verify Your Setup
 
-Let's make sure everything is working before proceeding to the labs.
+Let's make sure MCP servers are working before proceeding to the labs.
 
-### Test 1: Copilot Code Suggestions
+### Verify MCP Server Configuration
 
-1. Create a new file: `test-copilot.js` (or `.py` or `.cs`)
-2. Type the following comment:
+1. Open GitHub Copilot Chat in VS Code (`Ctrl+Shift+I` / `Cmd+Shift+I`)
 
-   ```javascript
-   // Function to reverse a string
-   ```
+2. Check if MCP servers are available:
+   - Look for MCP server indicators in the chat interface
+   - MCP servers should be listed when they're relevant to your query
 
-3. Press `Enter` and wait for Copilot to suggest code
-4. Accept the suggestion with `Tab`
-5. **Expected Result**: Copilot should suggest a complete function
+3. **Expected Result**: MCP servers are configured and accessible
 
-### Test 2: Copilot Chat
-
-1. Open Copilot Chat (`Ctrl+Shift+I` / `Cmd+Shift+I`)
-2. Type the following prompt:
-
-   ```text
-   Explain how async/await works in JavaScript
-   ```
-
-3. **Expected Result**: Copilot should provide a detailed explanation
-
-### Test 3: Agent Mode
-
-1. In Copilot Chat, ensure Agent Mode is enabled
-2. Type the following prompt:
-
-   ```text
-   Create a simple Express server with one GET endpoint at /hello that returns "Hello World"
-   ```
-
-3. **Expected Result**: Copilot should generate code and ask if you want to apply it
-
-### Test 4: Context7 MCP
-
-1. In Copilot Chat, type:
-
-   ```text
-   Use context7 to explain how to use React hooks
-   ```
-
-2. **Expected Result**: Copilot should fetch React documentation and provide an answer
-
----
-
-## Troubleshooting
-
-### Issue: Copilot Not Showing Suggestions
-
-**Solutions:**
-- Verify your GitHub account is signed in (bottom-left corner)
-- Check that Copilot extension is enabled (Extensions panel)
-- Restart VS Code
-- Check Copilot status icon in the status bar (should not show errors)
-
-### Issue: MCP Server Not Found
-
-**Solutions:**
-- Restart VS Code after installing MCP servers
-- Verify installation with `npm list -g` (for Node.js) or `pip list` (for Python)
-- Check VS Code Output panel for MCP errors
-
-### Issue: Agent Mode Not Available
-
-**Solutions:**
-- Update GitHub Copilot extensions to the latest version
-- Ensure you have GitHub Copilot Chat installed
-- Restart VS Code
-
-### Issue: Copilot Subscription Error
-
-**Solutions:**
-- Go to [GitHub Copilot Settings](https://github.com/settings/copilot)
-- Verify your subscription is active
-- Sign out and sign back in to VS Code
+**Note:** If MCP servers are not showing up, revisit the [MCP installation guide](https://github.com/anthropics/anthropic-quickstarts) and ensure configuration is correct in VS Code settings.
 
 ---
 
@@ -349,28 +172,18 @@ Let's make sure everything is working before proceeding to the labs.
 
 ✅ **Setup Complete!** You're now ready to start the workshop labs.
 
-**Recommended Learning Path:**
+**Continue to the next lab:**
 
-1. **For 2-hour workshop**: Go to [Lab 01: Copilot Instructions](./01-copilot-instructions.md)
-2. **For 3-hour workshop**: Go to [Lab 01: Copilot Instructions](./01-copilot-instructions.md)
-
-**Alternative Paths:**
-
-- If you want to jump straight into coding: [Lab 04: Full-Stack Development](./04-dotnet.md)
-- If you're interested in TDD: [Lab 05: Test-Driven Development](./05-tdd-with-copilot.md)
+➡️ [Lab 01: Copilot Instructions](./01-copilot-instructions.md)
 
 ---
 
 ## Resources
 
 - [GitHub Copilot Documentation](https://docs.github.com/en/copilot)
+- [MCP Quickstart Guide](https://github.com/anthropics/anthropic-quickstarts)
 - [Copilot Best Practices](../COPILOT_BEST_PRACTICES.md)
-- [Workshop Quick Reference](../DEMO_QUICK_REFERENCE.md)
 
 ---
 
 **Ready to supercharge your development with GitHub Copilot? Let's go! 🚀**
-
----
-
-Let's move on to [Lab 01: Copilot Instructions](./01-copilot-instructions.md).
