@@ -49,32 +49,26 @@ In this lab, you'll set up the Playwright MCP server and use it to generate E2E 
 
 ## Install Playwright MCP Server
 
-### Step 1: Install Playwright MCP Server Globally
+### Step 1: Install Playwright MCP Server
 
 1. Open a terminal in VS Code.
 
-1. Install the Playwright MCP server:
+1. Visit the official Playwright MCP Server repository for installation instructions:
+   
+   **🔗 [https://github.com/mcp/microsoft/playwright-mcp](https://github.com/mcp/microsoft/playwright-mcp)**
+
+1. Follow the installation instructions provided in the repository's README.
+
+1. Verify installation by checking if the server is available:
 
    ```powershell
-   # PowerShell
-   npm install -g @microsoft/playwright-mcp-server
+   # PowerShell - Check if playwright-mcp is available
+   npx playwright-mcp --help
    ```
 
    ```bash
-   # Bash/Zsh
-   npm install -g @microsoft/playwright-mcp-server
-   ```
-
-1. Verify installation:
-
-   ```powershell
-   # PowerShell
-   npm list -g @microsoft/playwright-mcp-server
-   ```
-
-   ```bash
-   # Bash/Zsh
-   npm list -g @microsoft/playwright-mcp-server
+   # Bash/Zsh - Check if playwright-mcp is available
+   npx playwright-mcp --help
    ```
 
 ---
@@ -92,24 +86,26 @@ In this lab, you'll set up the Playwright MCP server and use it to generate E2E 
    
    - Create or update .vscode/settings.json
    - Add MCP server configuration for Playwright
-   - Use the global npm installation: "@microsoft/playwright-mcp-server"
+   - Use the installation method from: https://github.com/mcp/microsoft/playwright-mcp
    - Set command to: "npx"
-   - Set args to: ["@microsoft/playwright-mcp-server"]
+   - Set args to: ["playwright-mcp"] (or as specified in the repository instructions)
    - Show me the settings.json configuration
    ```
 
-1. Review the generated configuration. It should look like:
+1. Review the generated configuration. It should look similar to:
 
    ```json
    {
      "github.copilot.chat.mcp.servers": {
        "playwright": {
          "command": "npx",
-         "args": ["@microsoft/playwright-mcp-server"]
+         "args": ["playwright-mcp"]
        }
      }
    }
    ```
+
+   **Note:** The exact configuration may vary based on the installation method. Refer to the [repository documentation](https://github.com/mcp/microsoft/playwright-mcp) for the most current configuration.
 
 1. Click the ![keep button](https://img.shields.io/badge/keep-blue) button to accept the changes.
 
@@ -530,20 +526,20 @@ In this lab, you'll set up the Playwright MCP server and use it to generate E2E 
 
 **Solution:**
 
-1. Verify installation:
+1. Verify installation by checking if the server responds:
    ```bash
-   npm list -g @microsoft/playwright-mcp-server
+   npx playwright-mcp --help
    ```
 
 2. Reload VS Code window
 
 3. Check `.vscode/settings.json` configuration
 
-4. Try re-installing:
-   ```bash
-   npm uninstall -g @microsoft/playwright-mcp-server
-   npm install -g @microsoft/playwright-mcp-server
-   ```
+4. If installation issues persist, revisit the official repository for the latest installation instructions:
+   
+   **🔗 [https://github.com/mcp/microsoft/playwright-mcp](https://github.com/mcp/microsoft/playwright-mcp)**
+
+5. Follow the troubleshooting guidance provided in the repository's documentation.
 
 ### Issue: Tests Are Flaky
 
@@ -599,7 +595,9 @@ Proceed to [Lab 05: Test-Driven Development](./05-tdd-with-copilot.md) to practi
 ## Resources
 
 - [Playwright Documentation](https://playwright.dev/)
+- [Playwright MCP Server - Official MCP Repository](https://github.com/mcp/microsoft/playwright-mcp)
 - [Playwright MCP Server GitHub](https://github.com/microsoft/playwright-mcp-server)
+- [MCP Servers List](https://github.com/mcp)
 - [Page Object Model Pattern](https://playwright.dev/docs/pom)
 - [Playwright Best Practices](https://playwright.dev/docs/best-practices)
 - [E2E Testing Guide](https://martinfowler.com/articles/practical-test-pyramid.html)
