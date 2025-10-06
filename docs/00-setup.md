@@ -82,23 +82,23 @@ MCP servers extend GitHub Copilot's capabilities by providing access to:
 
 ### Installing MCP Servers for VS Code
 
-Follow the official MCP installation guide from Anthropic:
-
-1. **Visit the MCP GitHub Repository:**
-   - Go to [https://github.com/anthropics/anthropic-quickstarts](https://github.com/anthropics/anthropic-quickstarts)
-   - Navigate to the **MCP Quickstart Guide** section
-
-2. **Install MCP Servers for VS Code:**
-   - Follow the instructions for installing MCP servers in Visual Studio Code
-   - The guide provides detailed steps for setting up various MCP servers
+1. **Browse Available MCP Servers:**
+   - Visit [https://github.com/mcp](https://github.com/mcp) to see the list of available MCP servers
+   - Review the various MCP servers available for different purposes
    - Common servers include:
      - **Context7**: For accessing library documentation
      - **Playwright**: For browser automation (covered in Lab 03)
      - **GitHub**: For repository interactions
+     - **Atlassian**: Connect to Jira and Confluence for issue tracking and documentation.
+
+2. **Install MCP Servers for VS Code:**
+   - Follow the installation instructions for your chosen MCP servers
+   - Each MCP server repository provides specific setup steps for Visual Studio Code
+   - The guide provides detailed steps for setting up various MCP servers
 
 3. **Configure VS Code Settings:**
    - After installation, MCP servers need to be configured in VS Code settings
-   - The quickstart guide provides the necessary configuration JSON
+   - Each MCP server provides the necessary configuration JSON
    - Restart VS Code after configuration
 
 ### Verify MCP Server Installation
@@ -164,7 +164,7 @@ Let's make sure MCP servers are working before proceeding to the labs.
 
 3. **Expected Result**: MCP servers are configured and accessible
 
-**Note:** If MCP servers are not showing up, revisit the [MCP installation guide](https://github.com/anthropics/anthropic-quickstarts) and ensure configuration is correct in VS Code settings.
+**Note:** If MCP servers are not showing up, revisit the [MCP servers list](https://github.com/mcp) and ensure configuration is correct in VS Code settings.
 
 ---
 
@@ -181,7 +181,7 @@ Let's make sure MCP servers are working before proceeding to the labs.
 ## Resources
 
 - [GitHub Copilot Documentation](https://docs.github.com/en/copilot)
-- [MCP Quickstart Guide](https://github.com/anthropics/anthropic-quickstarts)
+- [MCP Servers List](https://github.com/mcp)
 - [Copilot Best Practices](../COPILOT_BEST_PRACTICES.md)
 
 ---
