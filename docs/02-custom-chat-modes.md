@@ -512,7 +512,6 @@ Proceed to [Lab 03: Playwright MCP Server](./03-playwright-mcp.md) to integrate 
 
 ## Resources
 
-- [GitHub Copilot Chat Documentation](https://docs.github.com/en/copilot/github-copilot-chat)
 - [Test-Driven Development Guide](https://martinfowler.com/bliki/TestDrivenDevelopment.html)
 - [Red-Green-Refactor Cycle](https://www.codecademy.com/article/tdd-red-green-refactor)
 - [OWASP Top 10](https://owasp.org/www-project-top-ten/)
