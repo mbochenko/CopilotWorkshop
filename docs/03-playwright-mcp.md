@@ -579,9 +579,7 @@ My test selectors keep breaking when UI changes. Help me create more stable sele
 
 **What's Next:**
 
-Proceed to [Lab 05: Test-Driven Development](./05-tdd-with-copilot.md) to practice TDD workflow with your custom TDD mode.
-
-**Note:** Lab 04 (.NET Migration) is optional and can be skipped.
+Proceed to [Lab 04: Test-Driven Development](./05-tdd-with-copilot.md) to practice TDD workflow with your custom TDD mode.
 
 **Optional Enhancements:**
 
@@ -604,4 +602,4 @@ Proceed to [Lab 05: Test-Driven Development](./05-tdd-with-copilot.md) to practi
 
 ---
 
-OK. You've completed Lab 03. Let's move onto [Lab 05: Test-Driven Development](./05-tdd-with-copilot.md).
+OK. You've completed Lab 03. Let's move onto [Lab 04: Test-Driven Development](./05-tdd-with-copilot.md).

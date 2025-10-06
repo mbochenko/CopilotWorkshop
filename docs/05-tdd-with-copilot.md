@@ -1,4 +1,4 @@
-# 05: Test-Driven Development with Copilot
+# 04: Test-Driven Development with Copilot
 
 ## Scenario
 
@@ -759,11 +759,11 @@ I'm struggling to test this code because it has tight coupling. Help me refactor
 
 ## Next Steps
 
-✅ **Lab 05 Complete!** You've built features using Test-Driven Development with high test coverage.
+✅ **Lab 04 Complete!** You've built features using Test-Driven Development with high test coverage.
 
 **What's Next:**
 
-Proceed to [Lab 06: Documentation Automation](./06-documentation.md) to generate comprehensive documentation for your project.
+Proceed to [Lab 05: Documentation Automation](./06-documentation.md) to generate comprehensive documentation for your project.
 
 **Optional Enhancements:**
 
@@ -785,4 +785,4 @@ Proceed to [Lab 06: Documentation Automation](./06-documentation.md) to generate
 
 ---
 
-OK. You've completed Lab 05. Let's move onto [Lab 06: Documentation Automation](./06-documentation.md).
+OK. You've completed Lab 04. Let's move onto [Lab 05: Documentation Automation](./06-documentation.md).

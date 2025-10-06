@@ -1,4 +1,4 @@
-# 06: Documentation Automation with GitHub Copilot
+# 05: Documentation Automation with GitHub Copilot
 
 ## Scenario
 
@@ -776,9 +776,11 @@ Provide a prioritized list of documentation tasks.
 
 ## Next Steps
 
-✅ **Lab 06 Complete!** You've automated documentation for your entire project.
+✅ **Lab 05 Complete!** You've automated documentation for your entire project.
 
-**Congratulations! You've completed the entire GitHub Copilot Workshop! 🎉**
+**What's Next:**
+
+Proceed to [Lab 06: Advanced Techniques](./07-advanced-techniques.md) to master advanced GitHub Copilot techniques for expert developers.
 
 **What You've Accomplished:**
 
@@ -826,19 +828,4 @@ Provide a prioritized list of documentation tasks.
 
 ---
 
-**Thank you for completing the GitHub Copilot Workshop!**
-
-We hope you've learned valuable skills for using GitHub Copilot to accelerate your development workflow while maintaining high code quality and comprehensive documentation.
-
-**Keep coding with Copilot! 🚀**
-
----
-
-**Workshop Feedback:**
-
-Please share your feedback:
-- What was most valuable?
-- What could be improved?
-- What would you like to learn next?
-
-[Create a GitHub Issue](https://github.com/yourusername/CopilotWorkshop/issues) with your feedback!
+OK. You've completed Lab 05. Let's move onto [Lab 06: Advanced Techniques](./07-advanced-techniques.md).
